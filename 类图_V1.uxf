@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>470</x>
+      <y>60</y>
+      <w>210</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Table
+--
++NumberOfTable
+-StatusOfTable
+--
++GetNumberOfTable
++GetStatusOfTable
++CheckStatusOfTable
++CreateOrder
++SetStatusOfTable</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>50</y>
+      <w>210</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Customer
+--
++NameOfCustomer
++NumberOfCustomer
+--
++InputCustomerName
++SetCustomerNumber
++ChooseFood
++ChooseFoodNumber
++ChooseDrink
++ChooseDrinkNumber
++ScanComments
++SubmitOrder</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>570</y>
+      <w>210</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>Food
+--
++FoodID
++FoodName
++FoodPrice
++FoodDiscount
++FoodNumber
++FoodComment
+--
++GetFoodID
++GetFoodName
++GetFoodPrice
++GetFoodDiscount
++GetFoodNumber
++GetFoodComment</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>480</x>
+      <y>590</y>
+      <w>210</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Drink
+--
++DrinkID
++DrinkName
++DrinkPrice
++DrinkDiscount
++DrinkNumber
+--
++GetDrinkID
++GetDrinkName
++GetDrinkPrice
++GetDrinkDiscount
++GetDrinkNumber</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>290</x>
+      <y>300</y>
+      <w>210</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Order
+--
+-OrderNumber
+--
++GetOrderNumber
++GetCustomerName
++GetNumberOfTable
++GetFoodInfo
++GetDrinkInfo
++CalculateFinalSpends
++GetDate
++PrintOrder</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>300</x>
+      <y>80</y>
+      <w>190</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>m1=1
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>170</x>
+      <y>490</y>
+      <w>260</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>m1=0..*
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;80.0;240.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>490</y>
+      <w>200</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>m1=0..*
+m2=1
+</panel_attributes>
+    <additional_attributes>180.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>10</x>
+      <y>330</y>
+      <w>40</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>Note..
+在支付完成后
+订单管理系统里，OrderNumber++
+桌子管理系统里，ChangeStatusOfTable（reset）
+
+订单管理系统：提供订单号（记录每天交易单数）
+
+菜单管理系统：提供food和drink相关信息
+
+桌子管理系统：提供桌号已经其对应状态
+
+获取foofInfo，通过数量判断是否选择了这道菜</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>670</x>
+      <y>100</y>
+      <w>160</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>TableManageSystem</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>410</x>
+      <y>780</y>
+      <w>200</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>180.0;10.0;180.0;80.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>790</y>
+      <w>240</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;70.0;220.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>330</x>
+      <y>840</y>
+      <w>160</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>MenuManageSystem</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>670</x>
+      <y>100</y>
+      <w>90</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>70.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>500</x>
+      <y>350</y>
+      <w>160</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>OrderManageSystem</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>350</y>
+      <w>100</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>80.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>570</x>
+      <y>210</y>
+      <w>30</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>190</x>
+      <y>240</y>
+      <w>120</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>m1=1
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0;100.0;160.0</additional_attributes>
+  </element>
+</diagram>

@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/shopend/shopend"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "black",
+    "selectedColor": "#1296db",
+    "backgroundColor": "white",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "点餐",
+        "iconPath":"img/diancan.png",
+        "selectedIconPath":"img/diancan_1.png"
+      },
+      {
+        "pagePath": "pages/shopend/shopend",
+        "text": "购物车",
+        "iconPath": "img/cart-off.png",
+        "selectedIconPath": "img/cart-on.png"
+      }
+    ]
+  }
+}

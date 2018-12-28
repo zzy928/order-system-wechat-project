@@ -1,0 +1,29 @@
+<view wx:if="{{shopdata.length!=2}}">
+  <view class="diancanview diancan">
+    <view class="diancanlist" wx:for="{{shopdata}}">
+      <view class="listtile" wx:if="{{index==0}}">菜名</view>
+      <view class="listtile" wx:if="{{index==0}}">单价</view>
+      <view class=" listtile" wx:if="{{index==0}}">
+        <view class="listnubervalue">数量</view>
+      </view>
+      <view class="listname" wx:if="{{index!=0}}">{{item.name}}</view>
+
+      <view class="listprice" wx:if="{{index!=0}}">{{item.price}}</view>
+
+      <view class=" listnuber" wx:if="{{index!=0}}">
+        <image src="../../img/jian.png" id="{{item.id}}" class="listimg" bindtap="listjian"></image>
+        <view class="listnubervalue">{{item.nuber}}</view>
+        <image src="../../img/add.png" id="{{item.id}}" class="listimg" bindtap="listadd"></image>
+      </view>
+
+    </view>
+  </view>
+  <view class="jiesuan">
+    <view class="jiaqian">
+      共计消费为
+      <text style="color:royalblue">{{price}}</text>元
+    </view>
+    <view class="maidan" bindtap="fukun" >付款</view>
+  </view>
+</view>
+<view class="notshop" wx:if="{{shopdata.length==2}}">你还未点餐</view>

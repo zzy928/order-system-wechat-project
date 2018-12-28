@@ -1,0 +1,76 @@
+/* pages/shopend/shopend.wxss */
+
+.diancanimg{
+  padding: 5px;
+  background-color: white;
+  display: block;
+  margin: 50rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border: 1px solid gainsboro;
+  border-radius: 50%;
+}
+.diancanview{
+  background-color: white;
+  width: 100vw;
+}
+.diancanlist{
+  display: flex;
+  padding: 7px 0;
+  border-bottom: dashed #fe530f;
+}
+.listname{
+  flex: 2;
+line-height: 32px;
+}
+.listprice{
+flex: 1;
+line-height: 32px;
+color: royalblue
+}
+.listnuber{
+flex: 2;
+display: flex;
+text-align:center;
+padding: 0 10%;
+line-height: 32px;
+}
+.listimg{
+  flex: 1;
+  border-radius: 50%;
+  width: 70rpx;
+  height: 70rpx;
+}
+.listnubervalue{
+  flex: 2;
+}
+.listtile{
+  flex: 1;
+  background-color: rgb(243, 91, 44);
+  padding: 15rpx 0;
+}
+.jiesuan{
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  width: 100vw;
+  line-height: 80rpx;
+  border-top:1px solid gainsboro; 
+}
+.jiaqian{
+  flex: 2;
+}
+.maidan{
+  flex: 1;
+  background-color: #feb70f;
+  color: white;
+  text-align: center;
+}
+.notshop{
+  background-color: gainsboro;
+  color: gray;
+  line-height: 60vh;
+  height: 100vh;
+  text-align: center;
+  font-size: 60rpx
+}

@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class="body">
+  <scroll-view class="left" scroll-y="true">
+    <view wx:for="{{rightdata}}" wx:for-item="classify" class="leftview {{index==linheightid?'clickview':''}}" id="{{index}}" bindtap="clickbtn">{{classify.title}}</view>
+  </scroll-view>
+  <scroll-view class="right" scroll-y="true" scroll-into-view="{{intoid}}" bindscroll="{{scroll}}">
+    <view class="rightlist" wx:for="{{rightdata}}" wx:for-item="classify" id="id{{index}}">
+      <view class="classifytitle">{{classify.title}}</view>
+      <view class="rightview" wx:for="{{classify.list}}" wx:for-item="menu" wx:key="name">
+        <view class="classname">
+          <image class="image" src="{{menu.imgurl}}"></image>
+        </view>
+        <view class="classname">
+          <view class="name"> {{menu.name}}</view>
+          <view class="price">单价：
+            <text>{{menu.price}}</text>元/例</view>
+        </view>
+        <view class="classname">
+          <image src='../../img/jian.png' class='.listimage' bindtap="jianshop" data-name="{{menu.name}}" data-price="{{menu.price}}" id="{{menu.id}}" data-num="{{menu.num}}"></image>
+        </view>
+        <view class="classname">
+          <view class="listnubervalue">{{menu.num}}</view>
+        </view>
+        <view class="classname">
+          <image src='../../img/add.png' class='.listimage' bindtap="addshop" data-name="{{menu.name}}" data-price="{{menu.price}}" id="{{menu.id}}" data-num="{{menu.num}}"></image>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

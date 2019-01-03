@@ -1,1 +1,100 @@
-/**/
+/**index.wxss**/
+
+.body {
+  display: flex;
+}
+
+.left, .right {
+  height: 99vh;
+}
+
+.left {
+  flex: 1;
+  background-color: papayawhip;
+}
+
+.right {
+  flex: 3;
+}
+
+.rightview, .leftview {
+  width: 100%;
+  text-align: center;
+}
+
+.leftview {
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 2px dashed white;
+}
+
+.rightview {
+  height: 148rpx;
+  display: flex;
+  border-bottom: 1px dashed gainsboro;
+  padding-left: 5px;
+  padding-bottom: 10px;
+}
+
+.clickview {
+  border-right: none !important;
+  background-color: white;
+}
+
+.rightlist {
+  padding-bottom: 20rpx;
+}
+
+.classifytitle {
+  font-size: 45rpx;
+  font-weight: bold;
+  background-color: papayawhip;
+  margin-bottom: 10px;
+  text-align: center;
+  color: royalblue;
+}
+
+.classname {
+  flex: 1;
+}
+
+.image {
+  margin-top: 5px;
+  height: 100%;
+  width: 150rpx;
+  border-radius: 10%;
+}
+
+.name, .price {
+   margin-left: 10px;
+  height: 50%;
+  line-height: 70rpx;
+  width: 170rpx;
+}
+
+.name {
+  font-size: 35rpx;
+  font-weight: bold;
+}
+
+.price {
+  font-size: 24rpx;
+}
+
+.price text {
+  color: royalblue;
+  font-weight: bold;
+}
+
+.listimage {
+  margin-top: 25px;
+  border-radius: 10%;
+  width: 70rpx;
+  height: 35%;
+}
+
+.listnubervalue {
+  line-height: 150rpx;
+  width: 70rpx;
+  font-weight: bold;
+}

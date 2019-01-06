@@ -60,14 +60,17 @@ padding-bottom: 40rpx;
 .classname {
   flex: 1;
 }
-.image{
-  width: 100%;
+.image {
+  margin-top: 5px;
   height: 100%;
-  border-radius: 5%;
+  width: 150rpx;
+  border-radius: 10%;
 }
-.name,.price{
+.name, .price {
+   margin-left: 10px;
   height: 50%;
- line-height: 74rpx;
+  line-height: 70rpx;
+  width: 170rpx;
 }
 .name{
   font-size: 35rpx;
@@ -81,7 +84,16 @@ font-size: 24rpx;
   color: royalblue;
   font-weight: bold;
 }
-.icon{
-  height: 50%;
-  transform:rotate(45deg);
+.listimage {
+  margin-top: 25px;
+  border-radius: 10%;
+  width: 70rpx;
+  height: 35%;
 }
+
+.listnubervalue {
+  line-height: 150rpx;
+  width: 70rpx;
+  font-weight: bold;
+}
+

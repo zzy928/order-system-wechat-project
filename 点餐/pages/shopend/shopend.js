@@ -1,5 +1,6 @@
 // pages/shopend/shopend.js
 var shopdata;
+var datashop;
 Page({
 
   /**
@@ -27,14 +28,19 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var that=this;
-    
+    var that=this;//从缓存中获取最新的datashop和shpodata数据    
+    wx.getStorage({
+      key: 'datashop',
+      success: function(res) {
+        datashop = res.data;
+      }
+    })
     wx.getStorage({
       key: 'shopdata',
-      success: function (res) {
-        shopdata=res.data;
-        console.log(shopdata);
-        that.jisuanprice()
+      success: function(res) {
+        shopdata = res.data;
+        that.jisuanprice();
+        //绑定数据
         that.setData({
           shopdata: shopdata
         })
@@ -78,59 +84,84 @@ Page({
   },
    // 点餐
   diancan: function (e) {
-    console.log(e);
     this.setData({
       shopdata: shopdata,
     })
   },
   // 点餐列表减
   listjian: function (e) {
-    // console.log("点击的减", e);
+    //console.log(shopdata)
+    //console.log(datashop)   
+    //更新shopdata数据
     var shopid = e.target.id;
     for (var i = 0; i < shopdata.length; i++) {
       if (shopid == shopdata[i].id) {
-        shopdata[i].nuber -= 1;
-        if (shopdata[i].nuber == 0) {
-          if(i==1){
-            shopdata[i].nuber=1;
-          }else{
+        shopdata[i].number -= 1;
+        if (shopdata[i].number == 0) {
+          if (i == 1) {
+            shopdata[i].number = 1;
+          } else {
             shopdata.splice(i, 1);
           }
         };
-
         this.setData({
           shopdata: shopdata
         })
-        this.storage();
-        this.jisuanprice()
+        wx.setStorage({
+          key: "shopdata",
+          data: shopdata
+        })
+        this.jisuanprice();
         break;
       }
     }
+    //更新datashop数据
+    var dataid = e.target.id;
+    for (var i = 0; i < datashop.length; i++) {
+      for (var j = 0; j < datashop[i].list.length; j++) {
+        //定位datashop中的位置，数量大于0才能减，否则无操作
+        if (dataid == datashop[i].list[j].id && datashop[i].list[j].num > 0) {
+          datashop[i].list[j].num -= 1;
+          break;
+        }
+      }
+    }
+    wx.setStorage({
+      key: "datashop",
+      data: datashop
+    })
   },
   // 点餐列表加
   listadd: function (e) {
-    // console.log("点击加", e)
     var shopid = e.target.id;
     for (var i = 0; i < shopdata.length; i++) {
       if (shopid == shopdata[i].id) {
-        // console.log(shopdata[i])
-        shopdata[i].nuber += 1;
+        shopdata[i].number += 1;
         this.setData({
           shopdata: shopdata
         })
         this.jisuanprice()
-        this.storage()
+        wx.setStorage({
+          key: "shopdata",
+          data: shopdata
+        })
         break;
       }
-
     }
-  },
-  // 缓存点餐列表
-  storage:function(){
-    console.log(shopdata)
+
+    //更新datashop数据
+    var dataid = e.target.id;
+    for (var i = 0; i < datashop.length; i++) {
+      for (var j = 0; j < datashop[i].list.length; j++) {
+        if (dataid == datashop[i].list[j].id) {
+          datashop[i].list[j].num += 1;
+          break;
+        }
+      }
+    }
     wx.setStorage({
-      key: "shopdata",
-      data: shopdata
+      key: "datashop",
+      data: datashop
     })
   },
   // 计算价钱

@@ -15,10 +15,10 @@
           <view class="price">单价：
             <text>{{menu.price}}</text>元/例</view>
         </view>
-        <view class="classname">
+        <view class="classname" wx:if="{{menu.num>0}}">
           <image src='../../img/jian.png' class='.listimage' bindtap="jianshop" data-name="{{menu.name}}" data-price="{{menu.price}}" id="{{menu.id}}" data-num="{{menu.num}}"></image>
         </view>
-        <view class="classname">
+        <view class="classname" wx:if="{{menu.num>0}}">
           <view class="listnubervalue">{{menu.num}}</view>
         </view>
         <view class="classname">

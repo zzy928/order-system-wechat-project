@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>310</x>
+      <y>50</y>
+      <w>210</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Person
+--
+-id: Long
+-name: Long
+--
++getId()
++getName()
++setName()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>150</x>
+      <y>200</y>
+      <w>210</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Customer
+--
+-id: Long 
+-name: Long
+-status:String
+--
++getId()
++getStatus()
++getName()
++sel_dish()
++del_dish()
++submit()
++com_comment()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>210</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Shopkeeper
+--
+-id: Long
+-name: Long
+-status:String
+--
++getId()
++getStatus()
++getName()
++add_dish()
++del_dish()
++modify_dish()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>710</x>
+      <y>90</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Dish
+--
+-id: Long
+-picture:String
+-describe:String
+--
++getId()
++getPicture()
++setPicture()
++getDesscribe()
++setDescribe()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>710</x>
+      <y>320</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Comment
+--
+-id: Long 
+-person_id:Long
+-dish_id:Long
+-comment:String
+-date:Date
+--
++getId()
++getPerson_Id()
++getDish_Id()
++getComment()
++getDate()
++setDate()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>160</y>
+      <w>190</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>410</x>
+      <y>160</y>
+      <w>170</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;50.0</additional_attributes>
+  </element>
+</diagram>

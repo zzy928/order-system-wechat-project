@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>426</x>
+      <y>0</y>
+      <w>126</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Person
+--
+-id: Long
+-name: Long
+--
++getId()
++getName()
++setName()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>162</x>
+      <y>90</y>
+      <w>126</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Customer
+--
+-id: Long 
+-name: Long
+-status:String
+--
++getId()
++getStatus()
++getName()
++sel_dish()
++del_dish()
++submit()
++com_comment()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>90</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>Shopkeeper
+--
+-id: Long
+-name: Long
+-status:String
+--
++getId()
++getStatus()
++getName()
++add_dish()
++del_dish()
++modify_dish()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>432</x>
+      <y>90</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>Dish
+--
+-id: Long
+-picture:Long
+-describe:String
+--
++getId()
++getPicture()
++setPicture()
++getDesscribe()
++setDescribe()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>438</x>
+      <y>282</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>Comment
+--
+-id: Long 
+-person_id:Long
+-comment:String
+-date:Date
+--
++getId()
++getPerson_Id()
++getComment()
++getDate()
++setDate()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>438</x>
+      <y>630</y>
+      <w>126</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>SetComment_Service_impl
+--
+-Comment
+--
++getComment()
++Commit_Comment()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>66</x>
+      <y>450</y>
+      <w>90</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>Interface
+--
+PlaceOrder_Service</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>144</x>
+      <y>564</y>
+      <w>126</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>PlaceOrder_Service_impl
+--
+-order
+--
++getOrder()
++Commit_Order()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>282</x>
+      <y>624</y>
+      <w>96</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>Interface
+--
+SetComment_Service</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>918</x>
+      <y>588</y>
+      <w>78</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>Interface
+--
+AddDish_Service</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>906</x>
+      <y>474</y>
+      <w>126</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>AddDish_Service_impl
+--
+-Dish
+--
++getDish()
++Commit_Dish()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>804</x>
+      <y>660</y>
+      <w>78</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>Interface
+--
+DelDish_Service</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>780</x>
+      <y>564</y>
+      <w>126</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>DelDish_Service_impl
+--
+-Dish
+--
++getDish()
++Delelt_Dish()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>204</x>
+      <y>66</y>
+      <w>276</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>440.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>498</x>
+      <y>66</y>
+      <w>228</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;360.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>114</x>
+      <y>462</y>
+      <w>84</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>336</x>
+      <y>630</y>
+      <w>108</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>834</x>
+      <y>624</y>
+      <w>18</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>954</x>
+      <y>534</y>
+      <w>18</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1026</x>
+      <y>384</y>
+      <w>54</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>70.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>1038</x>
+      <y>462</y>
+      <w>60</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>Interface
+--
+DelDish_DAO</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>972</x>
+      <y>324</y>
+      <w>126</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>DelDish_DAO_impl
+--
+-Dish
+--
++getDish()
++Delelt_Dish()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>648</x>
+      <y>558</y>
+      <w>72</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>Interface
+--
+AddDish_DAO</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>678</x>
+      <y>480</y>
+      <w>132</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;140.0;200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>738</x>
+      <y>420</y>
+      <w>126</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>AddDish_DAO_impl
+--
+-Dish
+--
++getDish()
++Commit_Dish()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>456</x>
+      <y>474</y>
+      <w>126</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>SetComment_DAO_impl
+--
+-order
+--
++getOrder()
++Commit_Order()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>462</y>
+      <w>108</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>312</x>
+      <y>450</y>
+      <w>84</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>Interface
+--
+SetComment_DAO</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>204</x>
+      <y>402</y>
+      <w>126</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>PlaceOrder_DAO_impl
+--
+-order
+--
++getOrder()
++Commit_Order()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>198</x>
+      <y>300</y>
+      <w>18</w>
+      <h>138</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>162</x>
+      <y>294</y>
+      <w>72</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>Interface
+--
+PlaceOrder_DAO</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>204</y>
+      <w>66</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;330.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>288</x>
+      <y>198</y>
+      <w>204</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>320.0;10.0;10.0;340.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>204</x>
+      <y>462</y>
+      <w>48</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>486</x>
+      <y>390</y>
+      <w>42</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>204</y>
+      <w>282</w>
+      <h>282</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;450.0;450.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>474</x>
+      <y>534</y>
+      <w>72</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>198</y>
+      <w>96</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;380.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>198</y>
+      <w>306</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;490.0;370.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>738</x>
+      <y>198</y>
+      <w>246</w>
+      <h>186</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;390.0;290.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>510</x>
+      <y>198</y>
+      <w>516</w>
+      <h>138</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;840.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>966</x>
+      <y>384</y>
+      <w>42</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>828</x>
+      <y>480</y>
+      <w>30</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;30.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>288</x>
+      <y>138</y>
+      <w>156</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=0..n
+</panel_attributes>
+    <additional_attributes>10.0;20.0;240.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>288</x>
+      <y>174</y>
+      <w>162</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..n
+</panel_attributes>
+    <additional_attributes>10.0;10.0;250.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>552</x>
+      <y>138</y>
+      <w>114</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..n
+</panel_attributes>
+    <additional_attributes>170.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>492</x>
+      <y>198</y>
+      <w>30</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..n
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+</diagram>

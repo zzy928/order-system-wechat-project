@@ -1,7 +1,6 @@
 # order-system-wechat-project
 *2018_系统分析与设计课程_扫码点餐系统_微信小程序*
-| Tables     | Are | Cols |
-| git-name  | :学号(asc):  | :姓名:|
+| git-name  | 学号(asc)  | 姓名|
 | GHY73  | :18214728:  | :高海洋:|
 | liangcici  | :18214769:  | :梁曦文:|
 | anotherlq  | :18214784:  | :刘琦:|
